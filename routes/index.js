@@ -5,7 +5,7 @@ const apiRoutes = require('./api')
 router.use('/api', apiRoutes)
 
 // Send every other request to the app
-router.get("*", (req, res) => {
+router.use("*", (req, res) => {
     res.sendFile(path.join(__dirname, "./client/build/index.html"))
   })
 
