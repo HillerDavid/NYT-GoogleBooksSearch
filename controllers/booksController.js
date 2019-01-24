@@ -12,7 +12,7 @@ module.exports = {
             .then(data => res.json(data))
             .catch(err => res.status(422).json(err))
     },
-    delete: function (req, res) {
+    remove: function (req, res) {
         db.Book.findById({ _id: req.params.id })
             .then(data => data.remove())
             .then(data => res.json(data))

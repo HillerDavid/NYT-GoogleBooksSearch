@@ -4,4 +4,4 @@ const booksController = require('../../controllers/booksController')
 router.route('/').get(booksController.findAll)
     .post(booksController.addBook)
 
-router.route('/:id').get(booksController.delete)
+router.route('/:id').delete(booksController.remove)
