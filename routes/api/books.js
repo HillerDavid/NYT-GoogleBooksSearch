@@ -5,3 +5,5 @@ router.route('/').get(booksController.findAll)
     .post(booksController.addBook)
 
 router.route('/:id').delete(booksController.remove)
+
+module.exports = router

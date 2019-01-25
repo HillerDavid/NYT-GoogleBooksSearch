@@ -1,8 +1,14 @@
 import React from "react"
+import Container from '../components/Container'
+import BookList from '../components/BookList'
 
 const Saved = () => {
     return (
-        <div>Saved</div>
+        <div>
+            <Container name="Book List">
+                <BookList />
+            </Container>
+        </div>
     )
 }
 

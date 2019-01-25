@@ -11,11 +11,13 @@ class App extends Component {
       <Router>
         <div>
           <Nav />
-          <Jumbotron />
-          <Switch>
-            <Route exact path='/' component={Search} />
-            <Route exact path='/books' component={Saved} />
-          </Switch>
+          <div className='container'>
+            <Jumbotron />
+            <Switch>
+              <Route exact path='/' component={Search} />
+              <Route exact path='/books' component={Saved} />
+            </Switch>
+          </div>
         </div>
       </Router>
     );

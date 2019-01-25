@@ -1,8 +1,16 @@
-import React from "react"
+import React from 'react'
+import './index.css'
 
-const Container = () => {
+const Container = props => {
     return (
-        <div>Container</div>
+        <div className='container' id='container-display'>
+            <div className='container-name'>
+                {props.name}
+            </div>
+            <div>
+                {props.children}
+            </div>
+        </div>
     )
 }
 
