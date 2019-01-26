@@ -1,7 +1,14 @@
 const db = require("../models")
+const key = process.env.API_KEY
+const axios = require('axios')
 
 //Define methods
 module.exports = {
+    search: function (req, res) {
+        axios.get(`https://www.googleapis.com/books/v1/volumes?q=${req.params.id}&key=${key}`)
+        .then(result => res.json(result.data.items))
+        .catch(err => res.json(err))
+    },
     findAll: function (req, res) {
         db.Book.find(req.query)
             .then(data => res.json(data))
